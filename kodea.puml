@@ -1,0 +1,35 @@
+@startuml
+|#LightBlue|Operadorea|
+start
+:Piezak sartu 
+banda garraiatzailean;
+
+|#LightGreen|Detekzio Sistema|
+:Piezen materiala 
+identifikatu;
+note right
+Detekzio metodoak:
+- Magnetismo detekzioa
+- Infragorri sentsoreak
+- Konduktibitate neurketa
+end note
+
+|#LightYellow|Sailkapen Robotak|
+if (Pieza metalikoa?) then (bai)
+    :Metalezko pieza 
+    Metal Kaxara bideratu;
+    |#Pink|Metal Kaxa|
+    :Pieza metal kaxan gorde;
+else (ez)
+    |#LightCyan|Sailkapen Robotak|
+    :Plastikozko pieza 
+    Plastiko Kaxara bideratu;
+    |#Wheat|Plastiko Kaxa|
+    :Pieza plastiko kaxan gorde;
+endif
+
+|#LightGray|Sistema|
+:Prozesua erregistratu;
+
+stop
+@enduml
